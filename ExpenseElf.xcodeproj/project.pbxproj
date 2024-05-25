@@ -17,6 +17,8 @@
 		9BB45D5C2BFF57FD0028B63B /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB45D5B2BFF57FD0028B63B /* Expense.swift */; };
 		9BB45D5E2BFFE71A0028B63B /* ExpenseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB45D5D2BFFE71A0028B63B /* ExpenseCell.swift */; };
 		9BB45D602C0093570028B63B /* ExpenseSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB45D5F2C0093570028B63B /* ExpenseSheet.swift */; };
+		9BE176DF2C027DE500C5261A /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE176DE2C027DE500C5261A /* MonthView.swift */; };
+		9BE176E12C027DF900C5261A /* ExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE176E02C027DF900C5261A /* ExpenseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		9BB45D5B2BFF57FD0028B63B /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		9BB45D5D2BFFE71A0028B63B /* ExpenseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCell.swift; sourceTree = "<group>"; };
 		9BB45D5F2C0093570028B63B /* ExpenseSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseSheet.swift; sourceTree = "<group>"; };
+		9BE176DE2C027DE500C5261A /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
+		9BE176E02C027DF900C5261A /* ExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +144,8 @@
 				9BB45D332BFF57C50028B63B /* ContentView.swift */,
 				9BB45D5D2BFFE71A0028B63B /* ExpenseCell.swift */,
 				9BB45D5F2C0093570028B63B /* ExpenseSheet.swift */,
+				9BE176DE2C027DE500C5261A /* MonthView.swift */,
+				9BE176E02C027DF900C5261A /* ExpenseView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -283,7 +289,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BB45D5E2BFFE71A0028B63B /* ExpenseCell.swift in Sources */,
+				9BE176DF2C027DE500C5261A /* MonthView.swift in Sources */,
 				9BB45D5C2BFF57FD0028B63B /* Expense.swift in Sources */,
+				9BE176E12C027DF900C5261A /* ExpenseView.swift in Sources */,
 				9BB45D602C0093570028B63B /* ExpenseSheet.swift in Sources */,
 				9BB45D342BFF57C50028B63B /* ContentView.swift in Sources */,
 				9BB45D322BFF57C50028B63B /* ExpenseElfApp.swift in Sources */,
