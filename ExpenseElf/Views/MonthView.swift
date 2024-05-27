@@ -13,24 +13,22 @@ struct MonthView: View {
     @Query(sort: \Expense.date) var expenses: [Expense]
     @Environment(\.modelContext) private var context
     @State private var date: Date?
-    private var groupedExpenses: [Date: [Expense]] {
-        groupExpensesByMonth(expenses: expenses)
-    }
     
     var body: some View {
+        let expenseData = ExpenseData(expenses: expenses)
         NavigationStack {
             List {
-                ForEach(Array(groupedExpenses.keys.sorted(by: >)), id: \.self) { month in
-                    MonthExpenseCell(date: month, totalExpense: computeTotal(expenses: groupedExpenses[month]!))
+                ForEach(expenseData.monthExpenses) { monthExpense in
+                    MonthExpenseCell(date: monthExpense.month, totalExpense: monthExpense.totalExpense)
                         .onTapGesture {
-                            date = month
+                            date = monthExpense.month
                         }
                 }
             }
             .navigationTitle("Monthy Expenses")
         }
         .sheet(item: $date) {  date in
-            MonthlyExpenseSheet(selectedDate: date, expenses: groupedExpenses[date]!)
+            MonthlyExpenseSheet(selectedDate: date, expenses: expenseData.monthlyExpenseDict[date]!)
         }
         .overlay {
             if expenses.isEmpty {
@@ -53,18 +51,6 @@ struct MonthView: View {
            partialResult + expense.value
         }
     }
-}
-
-extension Date {
-    func startOfMonth() -> Date {
-        let calendar = Calendar.current
-        let components = calendar.dateComponents([.year, .month], from: self)
-        return calendar.date(from: components)!
-    }
-}
-
-extension Date: Identifiable {
-    public var id: Date { return self }
 }
 
 #Preview {

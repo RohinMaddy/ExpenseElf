@@ -15,14 +15,16 @@ struct GraphView: View {
     @Environment(\.modelContext) private var context
     
     var body: some View {
+        let expenseData = ExpenseData(expenses: expenses)
         NavigationStack {
-            Chart(expenses) {
-                LineMark(
-                    x: .value("Month", $0.date),
-                    y: .value("Hours of Sunshine", $0.value)
+            Chart(expenseData.monthExpenses.sorted(by: { $0.month < $1.month
+            })) {
+                BarMark(
+                    x: .value("Month", $0.month.formatted(.dateTime.month())),
+                    y: .value("expnenses", $0.totalExpense)
                 )
             }
-            .padding(EdgeInsets(top: 50, leading: 20, bottom: 50, trailing: 20))
+            .padding(EdgeInsets(top: 50, leading: 25, bottom: 50, trailing: 25))
             .navigationTitle("Expense Graph")
             .overlay {
                 if expenses.isEmpty {

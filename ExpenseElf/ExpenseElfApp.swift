@@ -20,7 +20,7 @@ struct ExpenseElfApp: App {
             fatalError("Unable to build container!")
         }
     }
-    
+        
     var body: some Scene {
         WindowGroup {
             ContentView()

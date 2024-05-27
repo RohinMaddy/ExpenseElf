@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9B35158D2C05118700C7E07A /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35158C2C05118700C7E07A /* GraphView.swift */; };
+		9B35158F2C05183200C7E07A /* MonthlyExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35158E2C05183200C7E07A /* MonthlyExpense.swift */; };
+		9B3515912C0524E000C7E07A /* ExpenseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3515902C0524E000C7E07A /* ExpenseData.swift */; };
 		9BB45D322BFF57C50028B63B /* ExpenseElfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB45D312BFF57C50028B63B /* ExpenseElfApp.swift */; };
 		9BB45D342BFF57C50028B63B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB45D332BFF57C50028B63B /* ContentView.swift */; };
 		9BB45D362BFF57C60028B63B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BB45D352BFF57C60028B63B /* Assets.xcassets */; };
@@ -43,6 +45,9 @@
 
 /* Begin PBXFileReference section */
 		9B35158C2C05118700C7E07A /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		9B35158E2C05183200C7E07A /* MonthlyExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyExpense.swift; sourceTree = "<group>"; };
+		9B3515902C0524E000C7E07A /* ExpenseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseData.swift; sourceTree = "<group>"; };
+		9B3515922C052A8300C7E07A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9BB45D2E2BFF57C50028B63B /* ExpenseElf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpenseElf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BB45D312BFF57C50028B63B /* ExpenseElfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseElfApp.swift; sourceTree = "<group>"; };
 		9BB45D332BFF57C50028B63B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -128,7 +133,9 @@
 		9BB45D302BFF57C50028B63B /* ExpenseElf */ = {
 			isa = PBXGroup;
 			children = (
+				9B3515922C052A8300C7E07A /* Info.plist */,
 				9BB45D312BFF57C50028B63B /* ExpenseElfApp.swift */,
+				9B3515902C0524E000C7E07A /* ExpenseData.swift */,
 				9BB45D352BFF57C60028B63B /* Assets.xcassets */,
 				9BB45D622C0099AD0028B63B /* Model */,
 				9BB45D612C0099980028B63B /* Views */,
@@ -178,6 +185,7 @@
 		9BB45D622C0099AD0028B63B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9B35158E2C05183200C7E07A /* MonthlyExpense.swift */,
 				9BB45D5B2BFF57FD0028B63B /* Expense.swift */,
 			);
 			path = Model;
@@ -317,7 +325,9 @@
 				9BBF41432C04EC7600D52CE4 /* MonthlyExpenseSheet.swift in Sources */,
 				9BB45D5E2BFFE71A0028B63B /* ExpenseCell.swift in Sources */,
 				9BE176DF2C027DE500C5261A /* MonthView.swift in Sources */,
+				9B35158F2C05183200C7E07A /* MonthlyExpense.swift in Sources */,
 				9BB45D5C2BFF57FD0028B63B /* Expense.swift in Sources */,
+				9B3515912C0524E000C7E07A /* ExpenseData.swift in Sources */,
 				9B35158D2C05118700C7E07A /* GraphView.swift in Sources */,
 				9BE176E12C027DF900C5261A /* ExpenseView.swift in Sources */,
 				9BB45D602C0093570028B63B /* ExpenseSheet.swift in Sources */,
@@ -489,9 +499,9 @@
 				DEVELOPMENT_TEAM = Q9T822S676;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExpenseElf/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -518,9 +528,9 @@
 				DEVELOPMENT_TEAM = Q9T822S676;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExpenseElf/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
