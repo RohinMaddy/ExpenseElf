@@ -19,6 +19,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("Month", systemImage: "calendar")
                 }
+            GraphView()
+                .tabItem {
+                    Label("Graph", systemImage: "chart.xyaxis.line")
+                }
         }
     }
 }

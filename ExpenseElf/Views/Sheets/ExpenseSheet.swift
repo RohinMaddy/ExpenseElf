@@ -52,7 +52,3 @@ struct ExpenseSheet: View {
         }
     }
 }
-
-//#Preview {
-//    ExpenseSheet()
-//}

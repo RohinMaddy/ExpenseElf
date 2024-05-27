@@ -12,6 +12,7 @@ struct MonthView: View {
     
     @Query(sort: \Expense.date) var expenses: [Expense]
     @Environment(\.modelContext) private var context
+    @State private var date: Date?
     private var groupedExpenses: [Date: [Expense]] {
         groupExpensesByMonth(expenses: expenses)
     }
@@ -20,15 +21,16 @@ struct MonthView: View {
         NavigationStack {
             List {
                 ForEach(Array(groupedExpenses.keys.sorted(by: >)), id: \.self) { month in
-                    HStack {
-                        Text(month, format: .dateTime.month(.abbreviated).year())
-                            .frame(width: 120, alignment: .leading)
-                        Spacer()
-                        Text(computeTotal(expenses: groupedExpenses[month]!), format: .currency(code: "GBP"))
-                    }
+                    MonthExpenseCell(date: month, totalExpense: computeTotal(expenses: groupedExpenses[month]!))
+                        .onTapGesture {
+                            date = month
+                        }
                 }
             }
             .navigationTitle("Monthy Expenses")
+        }
+        .sheet(item: $date) {  date in
+            MonthlyExpenseSheet(selectedDate: date, expenses: groupedExpenses[date]!)
         }
         .overlay {
             if expenses.isEmpty {
@@ -61,6 +63,9 @@ extension Date {
     }
 }
 
+extension Date: Identifiable {
+    public var id: Date { return self }
+}
 
 #Preview {
     MonthView()

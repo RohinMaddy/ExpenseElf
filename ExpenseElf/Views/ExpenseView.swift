@@ -13,7 +13,7 @@ struct ExpenseView: View {
     @State private var isShowingExpenseSheet = false
     @Query(sort: \Expense.date) var expenses: [Expense]
     @Environment(\.modelContext) private var context
-    @State private var expneseToEdit: Expense?
+    @State private var expenseToEdit: Expense?
     @State private var isExpenseUpdating: Bool = false
     
     var body: some View {
@@ -22,7 +22,7 @@ struct ExpenseView: View {
                 ForEach(expenses) { expense in
                     ExpenseCell(expense: expense)
                         .onTapGesture {
-                            expneseToEdit = expense
+                            expenseToEdit = expense
                             isExpenseUpdating = true
                         }
                 }
@@ -36,7 +36,7 @@ struct ExpenseView: View {
             .sheet(isPresented: $isShowingExpenseSheet) {
                 ExpenseSheet(expense: Expense(name: "", date: Date.now, value: 0), isUpdatingSheet: $isExpenseUpdating)
             }
-            .sheet(item: $expneseToEdit) { expense in
+            .sheet(item: $expenseToEdit) { expense in
                 ExpenseSheet(expense: expense, isUpdatingSheet: $isExpenseUpdating)
             }
             .toolbar {
