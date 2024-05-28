@@ -31,7 +31,7 @@ Expense Elf is an iOS application built using SwiftUI and SwiftData, designed to
 1. **Clone the repository:**
 
 ```bash
-   git@github.com:RohinMaddy/ExpenseElf.git
+   git clone https://github.com/RohinMaddy/ExpenseElf.git
 ```
 2. **Navigate to the project directory:**
 
