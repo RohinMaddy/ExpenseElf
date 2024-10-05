@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import WidgetKit
 
 struct ExpenseSheet: View {
     @Environment(\.dismiss) private var dismiss
@@ -42,6 +43,7 @@ struct ExpenseSheet: View {
                             } catch {
                                 fatalError("Unable to save data")
                             }
+                            WidgetCenter.shared.reloadTimelines(ofKind: "ExpenseElfWidget")
                             dismiss()
                         }
                     } else {

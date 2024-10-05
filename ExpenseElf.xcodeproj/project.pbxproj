@@ -3,13 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		9B35158D2C05118700C7E07A /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35158C2C05118700C7E07A /* GraphView.swift */; };
 		9B35158F2C05183200C7E07A /* MonthlyExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35158E2C05183200C7E07A /* MonthlyExpense.swift */; };
 		9B3515912C0524E000C7E07A /* ExpenseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3515902C0524E000C7E07A /* ExpenseData.swift */; };
+		9B8B087B2CAF37BD00F53AA5 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B8B087A2CAF37BD00F53AA5 /* WidgetKit.framework */; };
+		9B8B087D2CAF37BD00F53AA5 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B8B087C2CAF37BD00F53AA5 /* SwiftUI.framework */; };
+		9B8B08882CAF37BE00F53AA5 /* ExpenseElfWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9B8B08782CAF37BD00F53AA5 /* ExpenseElfWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9B8B088E2CB1BA3400F53AA5 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB45D5B2BFF57FD0028B63B /* Expense.swift */; };
+		9B8B08912CB1BCDD00F53AA5 /* ExpenseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3515902C0524E000C7E07A /* ExpenseData.swift */; };
+		9B8B08922CB1C08E00F53AA5 /* MonthlyExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35158E2C05183200C7E07A /* MonthlyExpense.swift */; };
 		9BB45D322BFF57C50028B63B /* ExpenseElfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB45D312BFF57C50028B63B /* ExpenseElfApp.swift */; };
 		9BB45D342BFF57C50028B63B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB45D332BFF57C50028B63B /* ContentView.swift */; };
 		9BB45D362BFF57C60028B63B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BB45D352BFF57C60028B63B /* Assets.xcassets */; };
@@ -27,6 +33,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9B8B08862CAF37BE00F53AA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BB45D262BFF57C50028B63B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B8B08772CAF37BD00F53AA5;
+			remoteInfo = ExpenseElfWidgetExtension;
+		};
 		9BB45D3F2BFF57C60028B63B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9BB45D262BFF57C50028B63B /* Project object */;
@@ -43,11 +56,30 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9B8B08892CAF37BE00F53AA5 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9B8B08882CAF37BE00F53AA5 /* ExpenseElfWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		9B35158C2C05118700C7E07A /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		9B35158E2C05183200C7E07A /* MonthlyExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyExpense.swift; sourceTree = "<group>"; };
 		9B3515902C0524E000C7E07A /* ExpenseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseData.swift; sourceTree = "<group>"; };
 		9B3515922C052A8300C7E07A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9B8B08782CAF37BD00F53AA5 /* ExpenseElfWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ExpenseElfWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B8B087A2CAF37BD00F53AA5 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		9B8B087C2CAF37BD00F53AA5 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		9B8B088F2CB1BA6C00F53AA5 /* ExpenseElf.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExpenseElf.entitlements; sourceTree = "<group>"; };
+		9B8B08902CB1BAC700F53AA5 /* ExpenseElfWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExpenseElfWidgetExtension.entitlements; sourceTree = "<group>"; };
 		9BB45D2E2BFF57C50028B63B /* ExpenseElf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpenseElf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BB45D312BFF57C50028B63B /* ExpenseElfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseElfApp.swift; sourceTree = "<group>"; };
 		9BB45D332BFF57C50028B63B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,7 +99,30 @@
 		9BE176E02C027DF900C5261A /* ExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		9B8B088C2CAF37BE00F53AA5 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 9B8B08772CAF37BD00F53AA5 /* ExpenseElfWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		9B8B087E2CAF37BD00F53AA5 /* ExpenseElfWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (9B8B088C2CAF37BE00F53AA5 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ExpenseElfWidget; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
+		9B8B08752CAF37BD00F53AA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B8B087D2CAF37BD00F53AA5 /* SwiftUI.framework in Frameworks */,
+				9B8B087B2CAF37BD00F53AA5 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9BB45D2B2BFF57C50028B63B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -110,12 +165,24 @@
 			path = Sheets;
 			sourceTree = "<group>";
 		};
+		9B8B08792CAF37BD00F53AA5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B8B087A2CAF37BD00F53AA5 /* WidgetKit.framework */,
+				9B8B087C2CAF37BD00F53AA5 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9BB45D252BFF57C50028B63B = {
 			isa = PBXGroup;
 			children = (
+				9B8B08902CB1BAC700F53AA5 /* ExpenseElfWidgetExtension.entitlements */,
 				9BB45D302BFF57C50028B63B /* ExpenseElf */,
 				9BB45D412BFF57C60028B63B /* ExpenseElfTests */,
 				9BB45D4B2BFF57C60028B63B /* ExpenseElfUITests */,
+				9B8B087E2CAF37BD00F53AA5 /* ExpenseElfWidget */,
+				9B8B08792CAF37BD00F53AA5 /* Frameworks */,
 				9BB45D2F2BFF57C50028B63B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -126,6 +193,7 @@
 				9BB45D2E2BFF57C50028B63B /* ExpenseElf.app */,
 				9BB45D3E2BFF57C60028B63B /* ExpenseElfTests.xctest */,
 				9BB45D482BFF57C60028B63B /* ExpenseElfUITests.xctest */,
+				9B8B08782CAF37BD00F53AA5 /* ExpenseElfWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,6 +201,7 @@
 		9BB45D302BFF57C50028B63B /* ExpenseElf */ = {
 			isa = PBXGroup;
 			children = (
+				9B8B088F2CB1BA6C00F53AA5 /* ExpenseElf.entitlements */,
 				9B3515922C052A8300C7E07A /* Info.plist */,
 				9BB45D312BFF57C50028B63B /* ExpenseElfApp.swift */,
 				9B3515902C0524E000C7E07A /* ExpenseData.swift */,
@@ -194,6 +263,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9B8B08772CAF37BD00F53AA5 /* ExpenseElfWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B8B088D2CAF37BE00F53AA5 /* Build configuration list for PBXNativeTarget "ExpenseElfWidgetExtension" */;
+			buildPhases = (
+				9B8B08742CAF37BD00F53AA5 /* Sources */,
+				9B8B08752CAF37BD00F53AA5 /* Frameworks */,
+				9B8B08762CAF37BD00F53AA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				9B8B087E2CAF37BD00F53AA5 /* ExpenseElfWidget */,
+			);
+			name = ExpenseElfWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = ExpenseElfWidgetExtension;
+			productReference = 9B8B08782CAF37BD00F53AA5 /* ExpenseElfWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		9BB45D2D2BFF57C50028B63B /* ExpenseElf */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BB45D522BFF57C60028B63B /* Build configuration list for PBXNativeTarget "ExpenseElf" */;
@@ -201,10 +292,12 @@
 				9BB45D2A2BFF57C50028B63B /* Sources */,
 				9BB45D2B2BFF57C50028B63B /* Frameworks */,
 				9BB45D2C2BFF57C50028B63B /* Resources */,
+				9B8B08892CAF37BE00F53AA5 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9B8B08872CAF37BE00F53AA5 /* PBXTargetDependency */,
 			);
 			name = ExpenseElf;
 			productName = ExpenseElf;
@@ -254,9 +347,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1530;
+				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
+					9B8B08772CAF37BD00F53AA5 = {
+						CreatedOnToolsVersion = 16.0;
+					};
 					9BB45D2D2BFF57C50028B63B = {
 						CreatedOnToolsVersion = 15.3;
 					};
@@ -286,11 +382,19 @@
 				9BB45D2D2BFF57C50028B63B /* ExpenseElf */,
 				9BB45D3D2BFF57C60028B63B /* ExpenseElfTests */,
 				9BB45D472BFF57C60028B63B /* ExpenseElfUITests */,
+				9B8B08772CAF37BD00F53AA5 /* ExpenseElfWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9B8B08762CAF37BD00F53AA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9BB45D2C2BFF57C50028B63B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -317,6 +421,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9B8B08742CAF37BD00F53AA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B8B08922CB1C08E00F53AA5 /* MonthlyExpense.swift in Sources */,
+				9B8B088E2CB1BA3400F53AA5 /* Expense.swift in Sources */,
+				9B8B08912CB1BCDD00F53AA5 /* ExpenseData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9BB45D2A2BFF57C50028B63B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -356,6 +470,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9B8B08872CAF37BE00F53AA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B8B08772CAF37BD00F53AA5 /* ExpenseElfWidgetExtension */;
+			targetProxy = 9B8B08862CAF37BE00F53AA5 /* PBXContainerItemProxy */;
+		};
 		9BB45D402BFF57C60028B63B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9BB45D2D2BFF57C50028B63B /* ExpenseElf */;
@@ -369,6 +488,64 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		9B8B088A2CAF37BE00F53AA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ExpenseElfWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q9T822S676;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExpenseElfWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ExpenseElfWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rohinmadhavan.ExpenseElf.ExpenseElfWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9B8B088B2CAF37BE00F53AA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ExpenseElfWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q9T822S676;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExpenseElfWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ExpenseElfWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rohinmadhavan.ExpenseElf.ExpenseElfWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		9BB45D502BFF57C60028B63B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -493,6 +670,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ExpenseElf/ExpenseElf.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ExpenseElf/Preview Content\"";
@@ -522,6 +700,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ExpenseElf/ExpenseElf.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ExpenseElf/Preview Content\"";
@@ -625,6 +804,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9B8B088D2CAF37BE00F53AA5 /* Build configuration list for PBXNativeTarget "ExpenseElfWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B8B088A2CAF37BE00F53AA5 /* Debug */,
+				9B8B088B2CAF37BE00F53AA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9BB45D292BFF57C50028B63B /* Build configuration list for PBXProject "ExpenseElf" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
